@@ -94,7 +94,7 @@ def check_captcha(browser):
 # ----------------------
 # LAYER 1: Collect URLs
 # ----------------------
-def layer1_collect_urls(input_file='WRE Layer 1 Search String.xlsx', sheet='Sheet3', output_file='Layer1_Output_URLs.xlsx'):
+def layer1_collect_urls(input_file='Search Strings.xlsx', sheet='Sheet3', output_file='Layer1_Output_URLs.xlsx'):
     search_terms = pd.read_excel(input_file, sheet_name=sheet)['URL'].dropna().tolist()
     search_terms = [term + " Kenya" for term in search_terms]
 
