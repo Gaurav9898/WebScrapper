@@ -149,7 +149,7 @@ def explore_city(browser, term, zoom_in_levels=2, moves_per_level=4):
 # ----------------------
 # LAYER 1: Collect URLs (with map exploration & zooming)
 # ----------------------
-def layer1_collect_urls(input_file='WRE Layer 1 Search String.xlsx', sheet='Sheet3', output_file='Layer1_Output_URLs.xlsx'):
+def layer1_collect_urls(input_file='Search Strings.xlsx', sheet='Sheet3', output_file='Layer1_Output_URLs.xlsx'):
     search_terms = pd.read_excel(input_file, sheet_name=sheet)['URL'].dropna().tolist()
     search_terms = [term + " Rajasthan" for term in search_terms]
 
@@ -231,3 +231,4 @@ if __name__ == "__main__":
 
     # Then run Layer 2
     layer2_scrape_details()
+
